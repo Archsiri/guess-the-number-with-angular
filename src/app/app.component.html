@@ -1,0 +1,17 @@
+<div class="app">
+<h1>Guess the Number!</h1>
+<h2>Number betweean 1 and 20</h2>
+<h2>Lives: {{vidas}}</h2>
+<h2>Number: {{numInput}}</h2>
+<div class="add-container">
+<input type="number" required [(ngModel)]="numInput" class="input">
+<button (click)="intentarAdivinar()" class="button">Try it</button>
+</div>
+<h2> {{msg}}</h2>
+<div *ngIf="derrota===true">
+<button (click)="deNuevo()" class="button">Try again</button>
+</div>
+<div *ngIf="victoria===true">
+<button (click)="deNuevo()" class="button">Try again</button>
+</div>
+</div>
